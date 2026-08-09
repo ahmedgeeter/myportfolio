@@ -210,7 +210,7 @@ export default function App() {
               <a href="#projects" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 hover:scale-105 transition-all shadow-lg shadow-blue-900/10 dark:shadow-white/5">
                 {t.hero.btnPortfolio} <ArrowRight size={18} className={isAr ? 'mr-2 rotate-180' : 'ml-2'} />
               </a>
-              <a href="https://drive.google.com/file/d/1xJQKcTEe0cKGLOff9y1JcdRxV2cYAMBs/view?usp=sharing" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 hover:scale-105 transition-all shadow-sm">
+              <a href="https://drive.google.com/file/d/1LQYa5QLU3q8cB27JuKM2fqafNsjNXLTC/view?usp=sharing" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 hover:scale-105 transition-all shadow-sm">
                 <Download size={18} className={isAr ? 'ml-2' : 'mr-2'} /> {t.hero.btnResume}
               </a>
             </div>
