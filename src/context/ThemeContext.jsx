@@ -20,9 +20,11 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
+      root.classList.add('dark');
       root.classList.remove('light');
     } else {
       root.classList.add('light');
+      root.classList.remove('dark');
     }
   }, [isDarkMode]);
 
