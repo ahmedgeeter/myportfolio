@@ -42,13 +42,39 @@ export const translations = {
     },
     education: {
       sectionTitle: "Education & Certifications",
-      headlinePart1: "Academic ",
-      headlineHighlight: "Background",
+      headlinePart1: "Academic & Professional ",
+      headlineHighlight: "Credentials",
       degree: "B.Sc. in Computer Science",
       university: "Mansoura University, Egypt",
       date: "2019 - 2023",
-      certTitle: "Certifications & Specializations",
-      certs: "Kali Linux Essentials • Ethics in the Age of Generative AI • Introduction to Cybersecurity • Deep Learning: Getting Started"
+      certTitle: "Specialized AI Certifications",
+      certs: "AI Engineering Masterclass (Dr. Mahmoud Eid) • Deep Learning: Getting Started • Ethics in the Age of Generative AI",
+      certList: [
+        {
+          title: "AI Engineering Masterclass",
+          issuer: "Dr. Mahmoud Eid",
+          desc: "Advanced Multi-Agent Systems, LangGraph Architectures, Stateful Workflows & LLM Engineering",
+          highlight: true,
+          badge: "Flagship Credential",
+          year: "2024"
+        },
+        {
+          title: "Deep Learning: Getting Started",
+          issuer: "LinkedIn Learning",
+          desc: "Neural Network Foundations, Deep Architecture Design & Model Evaluation",
+          highlight: false,
+          badge: "Neural Networks",
+          year: "2023"
+        },
+        {
+          title: "Ethics in the Age of Generative AI",
+          issuer: "IBM / Educational",
+          desc: "Model Alignment, Bias Mitigation, Deterministic Guardrails & AI Safety",
+          highlight: false,
+          badge: "AI Safety",
+          year: "2024"
+        }
+      ]
     },
     projects: {
       sectionTitle: "Featured Production-Grade Systems",
@@ -141,14 +167,40 @@ export const translations = {
       ]
     },
     education: {
-      sectionTitle: "التعليم والشهادات",
-      headlinePart1: "الخلفية ",
-      headlineHighlight: "الأكاديمية",
+      sectionTitle: "التعليم والشهادات المتخصصة",
+      headlinePart1: "المؤهلات الأكاديمية ",
+      headlineHighlight: "والشهادات التقنية",
       degree: "بكالوريوس في علوم الحاسب",
       university: "جامعة المنصورة، مصر",
       date: "2019 - 2023",
-      certTitle: "الشهادات والاعتمادات",
-      certs: "Kali Linux Essentials • Ethics in Generative AI • Introduction to Cybersecurity • Deep Learning"
+      certTitle: "الشهادات والاعتمادات المتخصصة في الذكاء الاصطناعي",
+      certs: "AI Engineering Masterclass (د. محمود عيد) • Deep Learning: Getting Started • Ethics in Generative AI",
+      certList: [
+        {
+          title: "ماستركلاس هندسة الذكاء الاصطناعي (AI Engineering Masterclass)",
+          issuer: "د. محمود عيد (Dr. Mahmoud Eid)",
+          desc: "أنظمة الوكلاء المتقدمة، معمارية LangGraph، وهندسة مسارات النماذج اللغوية للإنتاج",
+          highlight: true,
+          badge: "اعتماد قيادي",
+          year: "2024"
+        },
+        {
+          title: "أساسيات التعلم العميق (Deep Learning: Getting Started)",
+          issuer: "LinkedIn Learning",
+          desc: "تصميم الشبكات العصبية، خوارزميات التدريب، ومعمارية النماذج العميقة",
+          highlight: false,
+          badge: "الشبكات العصبية",
+          year: "2023"
+        },
+        {
+          title: "أخلاقيات عصر الذكاء الاصطناعي التوليدي (Ethics in Generative AI)",
+          issuer: "IBM",
+          desc: "محاذاة النماذج، الحوكمة والمسؤولية، بوابات الأمان، والحد من التحيزات",
+          highlight: false,
+          badge: "أمان الذكاء الاصطناعي",
+          year: "2024"
+        }
+      ]
     },
     projects: {
       sectionTitle: "أنظمة إنتاجية مرجعية",
