@@ -6,28 +6,28 @@ import { useLanguage } from '../../context/LanguageContext';
 
 const stack = [
   {
-    category: 'AI & LLMs · Production',
-    skills: ['RAG', 'LangChain', 'LangGraph', 'OpenAI API', 'Groq', 'Gemini', 'Prompt Engineering', 'Multi-Provider Failover'],
+    category: 'Agentic AI & LLM Systems',
+    skills: ['LangGraph (Cyclic Graphs)', 'Production RAG', 'Tool Calling Nodes', 'LiteLLM', 'Redis Checkpointing', 'Groq & Gemini Fallback', 'Whisper & Vision Models'],
   },
   {
-    category: 'Security & Verification',
-    skills: ['Identity Verification', 'Security Testing', 'Injection Protection', 'Session Isolation', 'Deterministic Logic', 'Zero-Trust Design'],
+    category: 'Backend & Distributed Systems',
+    skills: ['Python (AsyncIO)', 'FastAPI', 'WebSockets (Full-Duplex)', 'Celery Task Queues', 'Redis (Pub/Sub & Caching)', 'Pydantic V2', 'SQLAlchemy / Alembic', 'RESTful APIs'],
   },
   {
-    category: 'Backend · FastAPI',
-    skills: ['Python', 'FastAPI', 'Pydantic', 'PostgreSQL', 'REST APIs', 'Async/Await', 'Rate Limiting'],
+    category: 'AI Alignment & Security',
+    skills: ['Adversarial Red-Teaming', 'Prompt Injection Mitigation', 'Deterministic Schemas', 'PII Anonymization', 'Zero-Trust Isolation', 'Output Guardrails'],
   },
   {
-    category: 'Automation & APIs',
-    skills: ['n8n', 'Google APIs', 'Gmail API', 'OAuth 2.0', 'Webhooks', 'API Integration'],
+    category: 'Cloud, DevOps & Infra',
+    skills: ['Docker & Multi-Stage Builds', 'Kubernetes (EKS Manifests)', 'Terraform (IaC)', 'GitHub Actions CI/CD', 'Prometheus & Observability', 'Linux / Bash', 'AWS (EC2, S3)'],
   },
   {
-    category: 'Infrastructure · DevOps',
-    skills: ['Docker', 'Git', 'Linux', 'CI/CD', 'Vercel', 'Render', 'AWS Basics'],
+    category: 'Databases & Storage',
+    skills: ['PostgreSQL (ACID)', 'Redis AsyncSaver', 'Vector Embeddings (FAISS / PGVector)', 'Alembic Migrations', 'Connection Pooling'],
   },
   {
-    category: 'Frontend · TypeScript',
-    skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Framer Motion', 'RTL Arabic'],
+    category: 'Frontend & Real-Time Streaming',
+    skills: ['React 18', 'TypeScript', 'Next.js', 'Tailwind CSS', 'WebSockets Client', 'Framer Motion', 'RTL Arabic Support'],
   },
 ];
 

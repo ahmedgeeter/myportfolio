@@ -4,10 +4,11 @@ import { ArrowRight, Terminal } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 const bootSequence = [
-  "> Initializing AI backend...",
-  "> Connecting to WebSockets...",
-  "> Loading neural models...",
-  "> Status: System Production-Ready."
+  "> Initializing LangGraph state machine...",
+  "> Mounting asynchronous FastAPI microservices...",
+  "> Connecting Redis session checkpointer...",
+  "> Activating multi-tier LLM failover: Groq + Gemini...",
+  "> Status: Production Agentic Engine Ready [Latency < 300ms]"
 ];
 
 const TerminalEmulator = () => {
@@ -19,7 +20,7 @@ const TerminalEmulator = () => {
       const timer = setTimeout(() => {
         setLines(prev => [...prev, bootSequence[currentIndex]]);
         setCurrentIndex(prev => prev + 1);
-      }, 800); // delay between lines
+      }, 700); // delay between lines
       return () => clearTimeout(timer);
     }
   }, [currentIndex]);
@@ -28,7 +29,7 @@ const TerminalEmulator = () => {
     <div className="w-full max-w-md bg-[#050505] border border-[var(--border)] rounded-lg overflow-hidden font-mono text-xs sm:text-sm mt-8 shadow-card">
       <div className="flex items-center px-3 py-2 bg-[var(--bg-secondary)] border-b border-[var(--border)] gap-2">
         <Terminal size={14} className="text-[var(--text-muted)]" />
-        <span className="text-[var(--text-muted)]">system_boot.sh</span>
+        <span className="text-[var(--text-muted)]">agentic_engine_boot.sh</span>
       </div>
       <div className="p-4 text-[var(--accent-light)] min-h-[120px]">
         {lines.map((line, i) => (
@@ -85,7 +86,7 @@ const Hero = () => {
                 transition={{ delay: 0.3 }}
                 className="text-[var(--accent-light)] font-mono text-xs sm:text-sm tracking-wider uppercase"
               >
-                Senior AI & Backend Engineer
+                AI Systems & Backend Engineer
               </motion.p>
               
               <motion.h1
@@ -95,7 +96,7 @@ const Hero = () => {
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight"
               >
                 I Engineer <br className="hidden sm:block" />
-                <span className="accent-mark">AI Backends</span><br />
+                <span className="accent-mark">AI Systems</span><br />
                 That Survive Reality.
               </motion.h1>
               
@@ -105,7 +106,7 @@ const Hero = () => {
                 transition={{ delay: 0.5 }}
                 className="text-base sm:text-lg lg:text-xl text-[var(--text-secondary)] max-w-xl leading-relaxed mt-4"
               >
-                Architecting high-performance, low-latency, and highly secure AI systems. Specialized in Python, Node.js, and advanced neural implementations.
+                Architecting resilient, production-grade AI systems and low-latency backend APIs. Specialized in LangGraph multi-agent workflows, asynchronous FastAPI, and real-time streaming infrastructure.
               </motion.p>
             </div>
 

@@ -6,47 +6,47 @@ import { useLanguage } from '../../context/LanguageContext';
 
 const achievements = [
   {
-    icon: Trophy,
-    title: 'AI Solutions Delivered',
-    value: '15+',
-    desc: 'Production-ready AI systems',
+    icon: Zap,
+    title: 'Streaming Latency',
+    value: '<300ms',
+    desc: 'Full-duplex WebSocket responsiveness',
     color: 'var(--accent)',
   },
   {
-    icon: GitCommit,
-    title: 'GitHub Contributions',
-    value: '500+',
-    desc: 'Open source commits this year',
+    icon: Trophy,
+    title: 'Production Architectures',
+    value: '5+',
+    desc: 'Reference AI systems deployed',
     color: 'var(--brand)',
   },
   {
-    icon: Users,
-    title: 'Happy Clients',
-    value: '10+',
-    desc: 'Across 5 countries',
+    icon: GitCommit,
+    title: 'Evaluated Benchmarks',
+    value: '1,000+',
+    desc: 'RLHF code & reasoning trajectories',
     color: 'var(--accent)',
   },
   {
-    icon: Zap,
-    title: 'API Integrations',
-    value: '25+',
-    desc: 'OpenAI, Groq, Gemini, etc.',
+    icon: Users,
+    title: 'Failover Reliability',
+    value: '99.9%',
+    desc: 'Multi-provider routing across Groq & Gemini',
     color: 'var(--brand)',
   },
 ];
 
 const certifications = [
-  { name: 'OpenAI API Expert', issuer: 'OpenAI', year: '2024' },
-  { name: 'AWS Machine Learning', issuer: 'Amazon', year: '2024' },
-  { name: 'LangChain Developer', issuer: 'LangChain', year: '2023' },
-  { name: 'RAG Systems Specialist', issuer: 'Independent', year: '2024' },
+  { name: 'Kali Linux Essentials', issuer: 'Linux Professional Institute', year: '2024' },
+  { name: 'Ethics in the Age of Generative AI', issuer: 'IBM / Educational', year: '2024' },
+  { name: 'Introduction to Cybersecurity', issuer: 'Cisco Networking Academy', year: '2024' },
+  { name: 'Deep Learning: Getting Started', issuer: 'LinkedIn Learning', year: '2023' },
 ];
 
 const highlights = [
-  { icon: BookOpen, text: 'Published 5+ technical articles on Medium' },
-  { icon: Mic, text: 'Speaker at local AI meetups' },
-  { icon: Star, text: 'Top rated freelancer on Upwork' },
-  { icon: Award, text: '100% client satisfaction rate' },
+  { icon: BookOpen, text: 'Graduated B.Sc. in Computer Science (Mansoura University) focusing on Distributed Systems & AI' },
+  { icon: Star, text: 'Architected stateful LangGraph agentic workflows with Redis Checkpointing' },
+  { icon: Award, text: 'Designed audited 5-layer prompt injection defense & deterministic Pydantic guardrails' },
+  { icon: Zap, text: 'Engineered asynchronous Celery & Redis queuing pipelines cutting API response times by 45%' },
 ];
 
 export default function Achievements() {

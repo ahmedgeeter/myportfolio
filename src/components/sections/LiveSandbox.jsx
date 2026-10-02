@@ -3,37 +3,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Terminal, Zap, CheckCircle2, Server, Globe } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
-const codeSnippet = `POST /api/v1/agent/chat HTTP/1.1
-Host: api.ahmedgeeter.com
+const codeSnippet = `POST /api/v1/agent/invoke HTTP/1.1
+Host: api.ahmedgaiter.site
 Content-Type: application/json
-Authorization: Bearer sk-live-xxxxxxxx
+Authorization: Bearer sk-live-production-jwt
 
 {
-  "model": "neural-v4-turbo",
-  "messages": [
-    {
-      "role": "user",
-      "content": "Analyze the latest system logs and identify the root cause of the latency spike."
-    }
-  ],
-  "stream": true,
-  "temperature": 0.1
+  "agent": "langgraph-supervisor",
+  "task": "resolve_logistics_dispute",
+  "session_id": "sess_8941_prod",
+  "tools": ["verify_auth", "query_postgres", "rag_search"],
+  "checkpointer": "AsyncRedisSaver"
 }`;
 
-const mockResponse = `> Initializing secure connection to neural cluster...
-> Authenticating request... [OK]
-> Fetching system logs (past 1hr)... [OK]
-> Analyzing 1.2M log entries... [OK]
+const mockResponse = `> [LangGraph Engine] Initializing state graph: session_id='sess_8941_prod'
+> [Redis Checkpointer] Loaded conversation state checkpoint [200 OK]
+> [Node: Router] Multi-provider active -> Dispatched to Groq (LLaMA-3.3-70B)
+> [Tool Invocation] verify_identity(tracking_id='SHP-4091') -> Verified [OK]
+> [Tool Invocation] query_postgres(order_id='SHP-4091') -> Status: In-Transit (Alexandria -> Cairo)
+> [Guardrail] Pydantic schema validation & zero PII leakage check -> [PASSED]
+> [State Transition] human_in_the_loop_check -> Auto-approved by policy
 
-[ROOT CAUSE IDENTIFIED]
-The latency spike at 14:02 UTC was caused by a cascading lock contention in the primary PostgreSQL database during a bulk UPSERT operation on the \`user_events\` table.
+[RESOLVED RESPONSE]
+"Shipment #SHP-4091 cleared the Tanta distribution facility at 14:15 UTC. Delivery is scheduled today before 18:00 UTC."
 
-[RECOMMENDATION]
-1. Implement batching for UPSERTs (max 500 rows/batch).
-2. Offload non-critical telemetry to a time-series DB (e.g., ClickHouse).
-3. Increase connection pool size from 50 to 100 temporarily.
-
-> Connection closed.`;
+[METRICS] Latency: 240ms | Checkpointer: Redis | Failover: Nominal | Tokens: 84`;
 
 const LiveSandbox = () => {
   const [isRunning, setIsRunning] = useState(false);
@@ -55,9 +49,9 @@ const LiveSandbox = () => {
       if (i >= mockResponse.length) {
         clearInterval(interval);
         setIsRunning(false);
-        setLatency(42); // Set latency badge to 42ms upon completion
+        setLatency(240); // 240ms sub-second latency
       }
-    }, 15); // Adjust typing speed here
+    }, 12);
   };
 
   return (
@@ -119,21 +113,17 @@ const LiveSandbox = () => {
             
             <div className="p-6 flex-1 font-mono text-sm leading-relaxed overflow-x-auto text-[var(--text-secondary)]">
               <pre className="whitespace-pre-wrap">
-                <span className="text-[var(--accent-light)]">POST</span> /api/v1/agent/chat HTTP/1.1{'\n'}
-                <span className="text-blue-400">Host:</span> api.ahmedgeeter.com{'\n'}
+                <span className="text-[var(--accent-light)]">POST</span> /api/v1/agent/invoke HTTP/1.1{'\n'}
+                <span className="text-blue-400">Host:</span> api.ahmedgaiter.site{'\n'}
                 <span className="text-blue-400">Content-Type:</span> application/json{'\n'}
-                <span className="text-blue-400">Authorization:</span> Bearer <span className="text-green-400">sk-live-xxxxxxxx</span>{'\n'}
+                <span className="text-blue-400">Authorization:</span> Bearer <span className="text-green-400">sk-live-production-jwt</span>{'\n'}
                 {'\n'}
                 {'{'}{'\n'}
-                {'  '}<span className="text-[var(--accent-light)]">"model"</span>: <span className="text-green-400">"neural-v4-turbo"</span>,{'\n'}
-                {'  '}<span className="text-[var(--accent-light)]">"messages"</span>: [{'\n'}
-                {'    '}{'{'}{'\n'}
-                {'      '}<span className="text-[var(--accent-light)]">"role"</span>: <span className="text-green-400">"user"</span>,{'\n'}
-                {'      '}<span className="text-[var(--accent-light)]">"content"</span>: <span className="text-green-400">"Analyze the latest system logs..."</span>{'\n'}
-                {'    '}{'}'}{'\n'}
-                {'  '}],{'\n'}
-                {'  '}<span className="text-[var(--accent-light)]">"stream"</span>: <span className="text-orange-400">true</span>,{'\n'}
-                {'  '}<span className="text-[var(--accent-light)]">"temperature"</span>: <span className="text-orange-400">0.1</span>{'\n'}
+                {'  '}<span className="text-[var(--accent-light)]">"agent"</span>: <span className="text-green-400">"langgraph-supervisor"</span>,{'\n'}
+                {'  '}<span className="text-[var(--accent-light)]">"task"</span>: <span className="text-green-400">"resolve_logistics_dispute"</span>,{'\n'}
+                {'  '}<span className="text-[var(--accent-light)]">"session_id"</span>: <span className="text-green-400">"sess_8941_prod"</span>,{'\n'}
+                {'  '}<span className="text-[var(--accent-light)]">"tools"</span>: [<span className="text-orange-400">"verify_auth"</span>, <span className="text-orange-400">"query_postgres"</span>],{'\n'}
+                {'  '}<span className="text-[var(--accent-light)]">"checkpointer"</span>: <span className="text-green-400">"AsyncRedisSaver"</span>{'\n'}
                 {'}'}
               </pre>
             </div>
