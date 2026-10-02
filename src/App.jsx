@@ -75,6 +75,27 @@ const ProjectImage = ({ project }) => {
     );
   }
 
+  if (project.isApi) {
+    return (
+      <div className="w-full h-full min-h-[220px] bg-[#070a12] p-5 flex flex-col justify-center font-mono text-xs border-b border-slate-800/80 text-slate-300" style={{ maxHeight: '300px' }}>
+        <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800/80 text-[11px] text-slate-400">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+            <span className="font-semibold text-slate-300">guardrail_service.py</span>
+          </div>
+          <span className="text-[10px] text-slate-500">FastAPI • Pydantic V2</span>
+        </div>
+        <pre className="text-slate-300 leading-relaxed text-[11.5px] overflow-x-auto font-mono">
+          <span className="text-blue-400">@router.post</span>(<span className="text-emerald-400">"/v1/guardrails/sanitize"</span>){'\n'}
+          <span className="text-purple-400">async def</span> <span className="text-amber-300">sanitize_prompt</span>(req: <span className="text-cyan-300">PromptRequest</span>):{'\n'}
+          {'  '}sanitized = <span className="text-blue-400">await</span> guardrail.filter_pii(req.text){'\n'}
+          {'  '}passed = <span className="text-blue-400">await</span> guardrail.detect_injection(sanitized){'\n'}
+          {'  '}<span className="text-purple-400">return</span> <span className="text-cyan-300">SanitizedResponse</span>(text=sanitized, safe=passed)
+        </pre>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full h-full min-h-[220px] bg-[#0a0d14] overflow-hidden" style={{ maxHeight: '300px' }}>
       <img 
@@ -126,7 +147,7 @@ export default function App() {
     },
     {
       ...t.projects.items[3], // LLM Safety Guardrail API
-      image: '/project-rag.png',
+      isApi: true,
       colSpan: 'lg:col-span-1'
     },
     {
