@@ -2,76 +2,67 @@ export const translations = {
   en: {
     nav: {
       about: "About",
+      projects: "Projects",
       experience: "Experience",
-      projects: "Systems",
-      skills: "Arsenal",
+      skills: "Skills",
       education: "Education",
-      contact: "Hire Me",
-      status: "Available for Hire",
+      contact: "Contact",
+      resume: "Resume",
     },
     hero: {
-      statusBadge: "Available for Full-Time & Contract (Remote / Relocation)",
+      location: "Cairo, Egypt • Open to Remote & Relocation",
       name: "Ahmed Gaiter",
-      rolePrefix: "I engineer",
-      roleHighlight: "Applied AI Systems & High-Throughput Python Backends",
-      bio: "Bridging the gap between frontier LLMs and dependable enterprise backends. I build deterministic multi-agent state machines with LangGraph, asynchronous microservices with FastAPI, and resilient Redis/Celery queue architectures.",
-      btnResume: "Download CV (PDF)",
-      btnWhatsApp: "Quick Chat on WhatsApp",
-      btnProjects: "Explore Systems",
+      role: "AI & Backend Software Engineer",
+      bio: "Software engineer specializing in applied AI and Python backend architectures. Builds stateful agent workflows with LangGraph, asynchronous microservices with FastAPI, and resilient Redis/Celery queue pipelines.",
+      btnResume: "Download Resume",
+      btnWhatsApp: "WhatsApp",
       btnEmail: "Email Me",
-      copied: "Email Copied!",
-      stats: [
-        { value: "2+ Yrs", label: "Production Systems", sub: "Python & LangGraph" },
-        { value: "<300ms", label: "Voice WebSocket Latency", sub: "AutoHire System" },
-        { value: "99.9%", label: "Provider Uptime", sub: "Multi-LLM Fallback" },
-        { value: "B.Sc.", label: "Mansoura University", sub: "Computer Science" }
-      ],
-      quickBadges: [
-        "LangGraph Multi-Agent Workflows",
-        "Asynchronous FastAPI & WebSockets",
-        "Redis & Celery Task Queues",
-        "Deterministic Pydantic v2 Guardrails",
-        "Docker & CI/CD Pipelines"
+      copied: "Copied!",
+      stack: [
+        "Python (AsyncIO)",
+        "FastAPI",
+        "LangGraph",
+        "Redis",
+        "Celery",
+        "PostgreSQL",
+        "Docker"
       ]
     },
     about: {
-      sectionBadge: "EXECUTIVE SUMMARY",
-      headline: "Engineered for resilience, not superficial wrappers.",
-      p1: "I specialize in architecting production-ready AI systems that do not break under scale or unpredictable LLM hallucinations. Rather than basic prompt chains, my systems leverage deterministic state graphs, runtime provider fallbacks (Groq, Gemini, OpenAI), and strict schema guardrails.",
-      p2: "My engineering philosophy prioritizes clean asynchronous architecture, sub-second latency, rigorous Pytest coverage, and containerized deployments ready for cloud workloads.",
+      sectionTitle: "About",
+      headline: "Production-focused backend and AI systems engineering.",
+      p1: "I build backend services and multi-agent workflows designed for reliability and measurable throughput. Rather than relying on simple wrappers, my work centers on deterministic state machines, asynchronous concurrency, and strict schema validation with Pydantic.",
+      p2: "My core stack includes Python (AsyncIO), FastAPI, LangGraph, Redis, PostgreSQL, and Docker, with a disciplined focus on clean architecture, automated testing (Pytest), and sub-second response times.",
       highlights: [
-        { 
-          title: "Deterministic State Machines", 
-          desc: "Cyclic multi-agent graphs with LangGraph, bounded tool calling, and Redis session checkpoints." 
+        {
+          title: "Distributed Concurrency",
+          desc: "Full-duplex WebSockets, Celery task decoupling, and Redis caching for responsive APIs."
         },
-        { 
-          title: "High-Concurrency Backend", 
-          desc: "Full-duplex WebSockets, Celery task decoupling, and asynchronous AsyncIO FastAPI endpoints." 
+        {
+          title: "Stateful Agent Graphs",
+          desc: "Cyclic workflows with LangGraph, bounded tool calling, and Redis session checkpoints."
         },
-        { 
-          title: "AI Safety & Alignment", 
-          desc: "Hands-on experience auditing model outputs, adversarial prompt sanitization, and Pydantic v2 schemas." 
+        {
+          title: "Model Evals & Alignment",
+          desc: "Auditing LLM-generated code, adversarial prompt testing, and strict Pydantic schemas."
         },
-        { 
-          title: "Formal CS Foundation", 
-          desc: "B.Sc. in Computer Science (2019–2023) + certified by Dr. Mahmoud Eid's AI Masterclass." 
+        {
+          title: "Formal CS Foundation",
+          desc: "B.Sc. in Computer Science from Mansoura University (2019–2023)."
         }
       ]
     },
     projects: {
-      sectionBadge: "PRODUCTION SYSTEMS",
-      headline: "Engineered with measurable performance and public source code.",
+      sectionTitle: "Projects",
+      headline: "Featured systems with source code and live demos.",
       viewDemo: "Live Demo",
       viewCode: "Source Code",
-      forTechLead: "Architecture Breakdown",
       items: [
         {
           id: "autohire",
           title: "AutoHire",
           subtitle: "Autonomous Real-Time Technical Interview Platform",
-          metric: "Sub-300ms voice & text latency",
-          desc: "A live technical interview engine utilizing event-driven LangGraph state machines paired with full-duplex WebSockets in FastAPI. Transcript evaluation is decoupled into background Celery workers backed by Redis, ensuring the candidate interaction loop remains instantaneous. Includes automated fallback routing from Groq (LPU) to Google Gemini Flash during provider throttling.",
-          architecture: "FastAPI WebSockets ➔ LangGraph Cyclic State Graph ➔ Redis Pub/Sub ➔ Celery Worker Pool ➔ Groq / Gemini Fallback",
+          desc: "A live technical interview engine utilizing LangGraph state machines paired with bidirectional FastAPI WebSockets. Transcript evaluation is decoupled into background Celery workers backed by Redis, with runtime fallback routing from Groq to Google Gemini Flash during provider throttling.",
           tags: ["FastAPI", "LangGraph", "WebSockets", "Redis", "Celery", "Pytest", "React"],
           demo: "https://ai-automation-interview.vercel.app/",
           github: "https://github.com/ahmedgeeter/ai-interview-automation",
@@ -81,10 +72,8 @@ export const translations = {
         {
           id: "shiphny",
           title: "Shiphny",
-          subtitle: "Multi-Agent Logistics Intelligence Platform",
-          metric: "Zero-unauthorized tool execution",
-          desc: "An enterprise logistics assistant powered by a LangGraph cyclic state agent with deterministic tool boundaries (tracking, cancellation, billing). Features PostgreSQL with Alembic migrations for transactional persistence, Redis session management, and automated multi-provider fallback chains between Groq and Gemini.",
-          architecture: "LangGraph State Agent ➔ Bounded Tool Router ➔ PostgreSQL + Alembic ➔ Redis Checkpoints ➔ Docker Compose",
+          subtitle: "Multi-Agent Logistics Platform",
+          desc: "An enterprise logistics support assistant powered by a LangGraph cyclic agent with deterministic tool boundaries (tracking, cancellation, billing). Features PostgreSQL with Alembic migrations for transactional persistence, Redis session management, and automated fallback chains between Groq and Gemini.",
           tags: ["FastAPI", "LangGraph", "PostgreSQL", "Alembic", "Redis", "Docker"],
           demo: "https://shiphny-ai-support.vercel.app/",
           github: "https://github.com/ahmedgeeter/shiphny-ai-support",
@@ -93,10 +82,8 @@ export const translations = {
         {
           id: "meridian",
           title: "Meridian",
-          subtitle: "Multimodal Document Intelligence & Vocal Auditor",
-          metric: "Zero hallucinated financial fields",
-          desc: "An end-to-end vision-language pipeline auditing complex multi-page industrial diagrams, blueprints, and invoices using Meta Llama-3.2 Vision. Incorporates Whisper speech transcription with intelligent Voice Activity Detection (VAD) and deterministic Pydantic v2 schemas to ensure 100% compliant data extraction.",
-          architecture: "Meta Llama-3.2 Vision ➔ Whisper VAD ➔ Pydantic v2 Strict Validators ➔ FastAPI Async Pipeline",
+          subtitle: "Multimodal Document Intelligence",
+          desc: "An end-to-end vision-language pipeline auditing industrial blueprints and invoices using Meta Llama-3.2 Vision. Incorporates Whisper speech transcription with intelligent Voice Activity Detection (VAD) and deterministic Pydantic v2 schemas.",
           tags: ["FastAPI", "Llama 3.2 Vision", "Whisper", "Pydantic v2", "React"],
           demo: "https://ai-auditor-ocr-voice.vercel.app/",
           github: "https://github.com/ahmedgeeter/ai-auditor-ocr-voice",
@@ -105,11 +92,9 @@ export const translations = {
         {
           id: "guardrails",
           title: "LLM Safety Guardrail API",
-          subtitle: "Production Security Microservice for AI Workflows",
-          metric: "<15ms sanitization latency",
-          desc: "High-performance microservice enforcing strict Pydantic output validation, adversarial prompt-injection detection, and automated PII anonymization before upstream LLM dispatch.",
-          architecture: "FastAPI Microservice ➔ Regex & Semantic Guardrails ➔ Redis Token Bucket ➔ Pydantic Sanitizer",
-          tags: ["FastAPI", "Pydantic v2", "Redis", "Docker", "AI Guardrails"],
+          subtitle: "Security Microservice for AI Workflows",
+          desc: "High-performance microservice enforcing strict Pydantic output validation, prompt-injection detection, and automated PII anonymization before upstream LLM dispatch.",
+          tags: ["FastAPI", "Pydantic v2", "Redis", "Docker"],
           demo: null,
           github: "https://github.com/ahmedgeeter/LLM-Safety-Guardrail-API",
           image: "/project-rag.png",
@@ -118,16 +103,15 @@ export const translations = {
       ]
     },
     experience: {
-      sectionBadge: "TRACK RECORD",
-      headline: "Hands-on experience delivering reliable software.",
+      sectionTitle: "Experience",
+      headline: "Professional experience and engineering contributions.",
       jobs: [
         {
           role: "AI & Backend Software Engineer",
           company: "Independent Contractor · Remote",
           period: "Jan 2024 — Present",
-          badge: "Current Role",
           bullets: [
-            "Architected and deployed asynchronous FastAPI backends and RAG pipelines; moved heavy LLM processing to Redis-backed Celery queues, cutting synchronous API response latency by 45%.",
+            "Architected and deployed asynchronous FastAPI backends and RAG pipelines; moved heavy processing into Redis-backed Celery queues, cutting synchronous API response latency by 45%.",
             "Implemented multi-provider LLM fallback routing across Groq, Gemini, and OpenAI to eliminate rate limits and maintain 99.9% uptime.",
             "Engineered commerce backends integrating payment webhooks (Stripe) with atomic PostgreSQL ledger updates; containerized services via Docker and GitHub Actions CI/CD."
           ],
@@ -137,7 +121,6 @@ export const translations = {
           role: "AI Integration Engineer",
           company: "Springer Capital · Contract",
           period: "May 2025 — Sep 2025",
-          badge: "Contract",
           bullets: [
             "Developed Python automation scripts and LLM-enabled API integrations for operational workflows, data transformations, and ingestion pipelines.",
             "Collaborated within an agile remote engineering squad to standardize API schemas and streamline data ingestion pipeline reliability."
@@ -148,7 +131,6 @@ export const translations = {
           role: "AI Alignment & Code Security Specialist",
           company: "Atlas Capture · Contract",
           period: "Dec 2024 — Feb 2025",
-          badge: "Contract",
           bullets: [
             "Audited and debugged complex Python and TypeScript code generated by frontier LLMs to produce high-benchmark RLHF alignment datasets.",
             "Evaluated adversarial prompt injection benchmarks, jailbreak attempts, and hallucination vectors to enforce model response safety.",
@@ -159,54 +141,50 @@ export const translations = {
       ]
     },
     skills: {
-      sectionBadge: "TECHNICAL ARSENAL",
-      headline: "Core proficiencies tested in production environments.",
+      sectionTitle: "Technical Skills",
+      headline: "Core technologies and engineering proficiencies.",
       groups: [
         {
-          title: "AI & Agentic Workflows",
-          icon: "Bot",
+          title: "AI & Agentic Systems",
           skills: [
-            "LangGraph (Cyclic Graphs & State Machines)",
-            "Production RAG & Vector Retrieval",
-            "Deterministic Tool Calling Guardrails",
-            "LiteLLM Multi-Provider Fallback",
-            "Redis Session Checkpointing",
+            "LangGraph (Cyclic Graphs)",
+            "Production RAG",
+            "Tool Calling Guardrails",
+            "LiteLLM Provider Routing",
+            "Redis Checkpointing",
             "Groq & Gemini APIs",
-            "Meta Llama 3.2 Vision & Whisper"
+            "Whisper & Vision LLMs"
           ]
         },
         {
-          title: "Backend & Concurrency",
-          icon: "Server",
+          title: "Backend & Systems",
           skills: [
-            "Python (AsyncIO, Concurrency)",
+            "Python (AsyncIO)",
             "FastAPI Microservices",
-            "Full-Duplex WebSockets",
-            "Celery Asynchronous Task Queues",
-            "Redis (Pub/Sub, Caching)",
-            "Pydantic v2 (Strict Validation)",
-            "SQLAlchemy & Alembic Migrations"
+            "WebSockets",
+            "Celery Task Queues",
+            "Redis (Pub/Sub & Cache)",
+            "Pydantic v2 Schemas",
+            "SQLAlchemy & Alembic"
           ]
         },
         {
-          title: "DevOps & Cloud Systems",
-          icon: "Cloud",
+          title: "DevOps & Cloud",
           skills: [
-            "Docker & Multi-Stage Builds",
+            "Docker & Docker Compose",
             "Kubernetes Manifests",
             "GitHub Actions CI/CD",
-            "Linux / Bash Scripting",
+            "Linux / Bash",
             "Pytest Testing Suites",
-            "Cloudflare Pages & Workers"
+            "Cloudflare Pages & DNS"
           ]
         },
         {
           title: "Databases & Full-Stack",
-          icon: "Database",
           skills: [
-            "PostgreSQL (Transactions, Indexing)",
-            "Vector Search (FAISS / PGVector)",
-            "TypeScript & JavaScript",
+            "PostgreSQL",
+            "Vector Search (FAISS/PGVector)",
+            "TypeScript",
             "React 18 & Next.js",
             "Tailwind CSS"
           ]
@@ -214,8 +192,8 @@ export const translations = {
       ]
     },
     education: {
-      sectionBadge: "EDUCATION & CREDENTIALS",
-      headline: "Academic degree and specialized AI certifications.",
+      sectionTitle: "Education & Certifications",
+      headline: "Academic degree and specialized training.",
       degree: {
         title: "B.Sc. in Computer Science",
         institution: "Mansoura University, Egypt",
@@ -227,114 +205,98 @@ export const translations = {
           title: "AI Engineering Masterclass",
           issuer: "Dr. Mahmoud Eid",
           year: "2026",
-          badge: "Specialized Masterclass",
           desc: "Advanced multi-agent architectures, deterministic LangGraph workflows, memory management, and production LLM engineering."
         },
         {
           title: "Backend Development Certificate",
           issuer: "Mansoura University",
           year: "2022",
-          badge: "Backend Engineering",
-          desc: "Relational database schema design, RESTful APIs, authentication, and concurrency optimization."
+          desc: "Relational database schema design, RESTful APIs, authentication, and high-concurrency systems."
         },
         {
           title: "Ethics in the Age of Generative AI",
           issuer: "IBM",
           year: "2024",
-          badge: "AI Safety",
           desc: "Model alignment, deterministic output guardrails, bias remediation, and responsible AI deployment."
         }
       ]
     },
     contact: {
-      sectionBadge: "READY TO HIRE?",
-      headline: "Let's build reliable AI systems for your product.",
-      desc: "Whether you need an Applied AI Engineer for agentic workflows, an asynchronous Python backend, or end-to-end LLM integration — I am ready to start immediately.",
-      emailLabel: "Email Address",
-      emailValue: "ahmedekramy303@gmail.com",
-      whatsappLabel: "WhatsApp Direct",
-      whatsappValue: "+20 106 933 4256",
-      btnEmail: "Send Email",
-      btnWhatsApp: "Chat on WhatsApp",
-      btnLinkedIn: "LinkedIn Profile",
-      btnGitHub: "GitHub Profile",
+      sectionTitle: "Contact",
+      headline: "Let's connect.",
+      desc: "Available for Applied AI Engineer and Python Backend roles (Full-Time or Contract, Remote or Relocation). Feel free to reach out directly.",
+      btnEmail: "Email Me",
+      btnWhatsApp: "WhatsApp",
+      btnLinkedIn: "LinkedIn",
+      btnGitHub: "GitHub",
       btnResume: "Download Resume (PDF)",
-      footer: "© {year} Ahmed Gaiter. Engineered with precision, liquid glass aesthetics, and dependable code."
+      footer: "© {year} Ahmed Gaiter. Built with clean architecture and simplicity."
     }
   },
   ar: {
     nav: {
       about: "عنّي",
+      projects: "المشاريع",
       experience: "الخبرات",
-      projects: "الأنظمة",
-      skills: "الترسانة التقنية",
+      skills: "المهارات",
       education: "التعليم",
-      contact: "تواصل للتوظيف",
-      status: "متاح للعمل فوراً",
+      contact: "التواصل",
+      resume: "السيرة الذاتية",
     },
     hero: {
-      statusBadge: "متاح للعمل بدوام كامل أو تعاقد (عن بُعد / إمكانية الانتقال)",
+      location: "القاهرة، مصر • متاح للعمل عن بُعد والانتقال",
       name: "أحمد جيتر",
-      rolePrefix: "أنا أهندس",
-      roleHighlight: "أنظمة الذكاء الاصطناعي التطبيقي وواجهات بايثون الخلفية عالية الأداء",
-      bio: "أسد الفجوة بين النماذج اللغوية الرائدة وبين الواجهات الخلفية المؤسسية الموثوقة. أبني آلات حالات للوكلاء الأذكياء بـ LangGraph، وخدمات سريعة غير متزامنة بـ FastAPI، وطوابير معالجة مرنة بـ Redis و Celery.",
-      btnResume: "تحميل السيرة الذاتية (PDF)",
-      btnWhatsApp: "محادثة فورية عبر واتساب",
-      btnProjects: "استعراض الأنظمة والمشاريع",
+      role: "مهندس برمجيات ذكاء اصطناعي وباك إند",
+      bio: "مهندس برمجيات متخصص في الذكاء الاصطناعي التطبيقي وتطوير الأنظمة الخلفية ببايثون. أبني تدفقات وكلاء أذكياء بـ LangGraph، وخدمات مصغرة غير متزامنة بـ FastAPI، وطوابير معالجة مرنة بـ Redis و Celery.",
+      btnResume: "تحميل السيرة الذاتية",
+      btnWhatsApp: "واتساب",
       btnEmail: "مراسلتي عبر البريد",
-      copied: "تم نسخ البريد الإلكتروني!",
-      stats: [
-        { value: "2+ سنوات", label: "أنظمة إنتاج حقيقية", sub: "Python & LangGraph" },
-        { value: "<300ms", label: "زمن استجابة الصوت", sub: "نظام AutoHire" },
-        { value: "99.9%", label: "جاهزية المزودين", sub: "تحويل تلقائي بين النماذج" },
-        { value: "بكالوريوس", label: "جامعة المنصورة", sub: "علوم الحاسب" }
-      ],
-      quickBadges: [
-        "أنظمة الوكلاء المتعددين (LangGraph)",
-        "واجهات FastAPI و WebSockets لحظية",
-        "طوابير مهام Redis و Celery",
-        "بوابات تدقيق صارمة عبر Pydantic v2",
-        "حاويات Docker وخطوط CI/CD"
+      copied: "تم النسخ!",
+      stack: [
+        "Python (AsyncIO)",
+        "FastAPI",
+        "LangGraph",
+        "Redis",
+        "Celery",
+        "PostgreSQL",
+        "Docker"
       ]
     },
     about: {
-      sectionBadge: "الملخص التنفيذي",
-      headline: "هندسة حقيقية للمتانة، وليست مجرد واجهات شكلية للنماذج.",
-      p1: "أتخصص في معمارية أنظمة ذكاء اصطناعي جاهزة لبيئات الإنتاج، لا تنهار تحت الأحمال العالية أو بسبب هلوسة النماذج اللغوية. بدلاً من سلاسل الأوامر البسيطة، تعتمد أنظمتي على مخططات حالات حتمية، وآليات تبديل بديلة عند الأعطال (Groq, Gemini, OpenAI)، وتدقيق صارم للمخططات.",
-      p2: "فلسفتي الهندسية تعطي الأولوية للمعماريات النظيفة غير المتزامنة، والاستجابة في أجزاء من الثانية، وتغطية اختبارات شاملة بـ Pytest، وحزم الخدمات في حاويات سحابية جاهزة.",
+      sectionTitle: "نبذة عني",
+      headline: "هندسة أنظمة ذكاء اصطناعي وواجهات خلفية موجهة للإنتاج.",
+      p1: "أركز على بناء واجهات برمجية وأنظمة وكلاء متعددين مصممة للمتانة ومعدلات الإنتاجية العالية. بدلاً من الاعتماد على واجهات سطحية، يرتكز عملي على آلات الحالات الحتمية، والتزامن غير المتزامن، والتدقيق الصارم للمخططات عبر Pydantic.",
+      p2: "تتضمن أدواتي الأساسية بايثون (AsyncIO)، و FastAPI، و LangGraph، و Redis، و PostgreSQL، و Docker، مع التزام كامل بالمعمارية النظيفة، والاختبارات المؤتمتة (Pytest)، وسرعة الاستجابة.",
       highlights: [
-        { 
-          title: "آلات حالات حتمية", 
-          desc: "مخططات وكلاء حلقية بـ LangGraph، واستدعاء أدوات مقيد الصلاحيات، وحفظ الجلسات بـ Redis." 
+        {
+          title: "أنظمة موزعة ومتزامنة",
+          desc: "اتصال WebSockets بـ FastAPI، وفصل المهام بـ Celery، وتخزين مؤقت بـ Redis."
         },
-        { 
-          title: "واجهات خلفية عالية التزامن", 
-          desc: "اتصال كامل عبر WebSockets، وتفريغ المهام لـ Celery، ونقاط وصول غير متزامنة بـ FastAPI." 
+        {
+          title: "مخططات وكلاء أذكياء",
+          desc: "تدفقات عمل حلقية بـ LangGraph، واستدعاء أدوات مقيد الصلاحيات، وحفظ الجلسات."
         },
-        { 
-          title: "أمان ومحاذاة الذكاء الاصطناعي", 
-          desc: "خبرة مباشرة في تدقيق مخرجات النماذج، ومنع حقن الأوامر، وتدقيق المخططات عبر Pydantic v2." 
+        {
+          title: "محاذاة وأمان النماذج",
+          desc: "تدقيق الأكواد المولدة من النماذج، واختبارات الأمان ضد حقن الأوامر، وتدقيق المخططات."
         },
-        { 
-          title: "أساس أكاديمي راسخ", 
-          desc: "بكالوريوس علوم الحاسب (2019–2023) + شهادة ماستركلاس هندسة الذكاء الاصطناعي مع د. محمود عيد." 
+        {
+          title: "أساس أكاديمي",
+          desc: "بكالوريوس علوم الحاسب من جامعة المنصورة (2019–2023)."
         }
       ]
     },
     projects: {
-      sectionBadge: "أنظمة الإنتاج",
-      headline: "أنظمة مطبقة بأرقام أداء ملموسة وأكواد برمجية معلنة.",
-      viewDemo: "المعاينة الحية",
+      sectionTitle: "المشاريع",
+      headline: "أنظمة برمجية مطبقة مع الكود المصدري والمعاينة الحية.",
+      viewDemo: "معاينة حية",
       viewCode: "الكود المصدري",
-      forTechLead: "المعمارية الهندسية",
       items: [
         {
           id: "autohire",
           title: "AutoHire",
-          subtitle: "منصة تقييم مقابلات تقنية ذكية ولحظية بالصوت والنص",
-          metric: "زمن استجابة أقل من 300 مللي ثانية",
-          desc: "محرك مقابلات تقنية حية يعتمد على آلة حالات LangGraph واتصال WebSockets ثنائي الاتجاه في FastAPI. تم فصل تقييم إجابات المرشحين إلى مهام خلفية في Celery و Redis للحفاظ على انسيابية الحوار بدون أي تأخير، مع توجيه تلقائي بديل بين Groq و Gemini Flash.",
-          architecture: "FastAPI WebSockets ➔ LangGraph Cyclic State Graph ➔ Redis Pub/Sub ➔ Celery Worker Pool ➔ Groq / Gemini Fallback",
+          subtitle: "منصة تقييم مقابلات تقنية ذكية ولحظية",
+          desc: "محرك مقابلات تقنية حية يعتمد على آلة حالات LangGraph واتصال WebSockets ثنائي الاتجاه في FastAPI. فصل تقييم الإجابات إلى مهام خلفية في Celery و Redis للحفاظ على انسيابية الحوار بدون أي تأخير، مع توجيه تلقائي بديل بين Groq و Gemini Flash.",
           tags: ["FastAPI", "LangGraph", "WebSockets", "Redis", "Celery", "Pytest", "React"],
           demo: "https://ai-automation-interview.vercel.app/",
           github: "https://github.com/ahmedgeeter/ai-interview-automation",
@@ -345,9 +307,7 @@ export const translations = {
           id: "shiphny",
           title: "Shiphny",
           subtitle: "منصة ذكاء لوجستي متعددة الوكلاء للمؤسسات",
-          metric: "منع كامل للاستدعاءات غير المصرح بها",
-          desc: "مساعد لوجستي يعتمد على وكيل حلقي بـ LangGraph مع حدود أدوات مقيدة محددة الصلاحيات (تتبع، إلغاء، فواتير). يستخدم PostgreSQL مع ترحيلات Alembic لتوثيق المعاملات، وذاكرة جلسات بـ Redis، ومسارات تبديل تلقائي بين Groq و Gemini.",
-          architecture: "LangGraph State Agent ➔ Bounded Tool Router ➔ PostgreSQL + Alembic ➔ Redis Checkpoints ➔ Docker Compose",
+          desc: "مساعد دعم لوجستي يعتمد على وكيل حلقي بـ LangGraph مع حدود أدوات مقيدة محددة الصلاحيات (تتبع، إلغاء، فواتير). يستخدم PostgreSQL مع ترحيلات Alembic لتوثيق المعاملات، وذاكرة جلسات بـ Redis، ومسارات تبديل تلقائي بين Groq و Gemini.",
           tags: ["FastAPI", "LangGraph", "PostgreSQL", "Alembic", "Redis", "Docker"],
           demo: "https://shiphny-ai-support.vercel.app/",
           github: "https://github.com/ahmedgeeter/shiphny-ai-support",
@@ -356,10 +316,8 @@ export const translations = {
         {
           id: "meridian",
           title: "Meridian",
-          subtitle: "نظام تدقيق المستندات والمخططات الصناعية متعدد الوسائط",
-          metric: "صفر حقول مالية مهلوسة",
+          subtitle: "نظام تدقيق المستندات والمخططات الصناعية",
           desc: "خط معالجة متكامل للرؤية واللغة لتحليل وتدقيق المخططات الهندسية والفواتير الصناعية المعقدة عبر Meta Llama-3.2 Vision والمطابقة الصوتية عبر Whisper مع كشف النشاط الصوتي (VAD) وفحوصات صارمة بـ Pydantic v2.",
-          architecture: "Meta Llama-3.2 Vision ➔ Whisper VAD ➔ Pydantic v2 Strict Validators ➔ FastAPI Async Pipeline",
           tags: ["FastAPI", "Llama 3.2 Vision", "Whisper", "Pydantic v2", "React"],
           demo: "https://ai-auditor-ocr-voice.vercel.app/",
           github: "https://github.com/ahmedgeeter/ai-auditor-ocr-voice",
@@ -369,10 +327,8 @@ export const translations = {
           id: "guardrails",
           title: "LLM Safety Guardrail API",
           subtitle: "خدمة أمنية لحماية وتدقيق مخرجات ومدخلات النماذج",
-          metric: "زمن فحص وتطهير أقل من 15 مللي ثانية",
           desc: "خدمة مصغرة عالية الأداء تفرض التحقق الصارم من صحة البيانات بـ Pydantic v2، وتمنع حقن الأوامر، وتخفي البيانات الحساسة (PII) تلقائياً قبل إرسال الطلبات للنماذج.",
-          architecture: "FastAPI Microservice ➔ Regex & Semantic Guardrails ➔ Redis Token Bucket ➔ Pydantic Sanitizer",
-          tags: ["FastAPI", "Pydantic v2", "Redis", "Docker", "AI Guardrails"],
+          tags: ["FastAPI", "Pydantic v2", "Redis", "Docker"],
           demo: null,
           github: "https://github.com/ahmedgeeter/LLM-Safety-Guardrail-API",
           image: "/project-rag.png",
@@ -381,16 +337,15 @@ export const translations = {
       ]
     },
     experience: {
-      sectionBadge: "السجل المهني",
-      headline: "خبرات عملية في بناء وتسليم برمجيات عالية الاعتمادية.",
+      sectionTitle: "الخبرات",
+      headline: "المحطات المهنية والمساهمات الهندسية.",
       jobs: [
         {
           role: "مهندس برمجيات ذكاء اصطناعي وباك إند",
-          company: "مطور مستقل · تعاقد حر عن بعد",
+          company: "مطور مستقل · تعاقد عن بُعد",
           period: "يناير 2024 — حتى الآن",
-          badge: "الدور الحالي",
           bullets: [
-            "معمارية وتطوير واجهات FastAPI غير متزامنة وخطوط RAG، ونقل معالجات النماذج الثقيلة إلى طوابير Celery و Redis لتقليص زمن استجابة الـ API بنسبة 45%.",
+            "تطوير واجهات FastAPI غير متزامنة وخطوط RAG، ونقل معالجات النماذج الثقيلة إلى طوابير Celery و Redis لتقليص زمن استجابة الـ API بنسبة 45%.",
             "بناء منظومة توجيه وتبديل بديلة بين مزودي النماذج (Groq و Gemini و OpenAI) لتفادي حدود الاستخدام وتحقيق جاهزية 99.9%.",
             "هندسة واجهات تجارية وربط خطافات الدفع مع تحديثات قيود ذرية في PostgreSQL، وحزم الخدمات عبر Docker و GitHub Actions."
           ],
@@ -398,9 +353,8 @@ export const translations = {
         },
         {
           role: "مهندس تكامل ذكاء اصطناعي",
-          company: "سبرينغر كابيتال · تعاقد عن بعد",
+          company: "سبرينغر كابيتال · تعاقد عن بُعد",
           period: "مايو 2025 — سبتمبر 2025",
-          badge: "تعاقد",
           bullets: [
             "تطوير نصوص أتمتة بلغة بايثون وتكاملات برمجية مدعومة بالنماذج اللغوية لتدفقات العمليات التشغيلية، وتحويل البيانات، وخطوط الاستيعاب.",
             "التعاون ضمن فريق هندسي عن بعد لتوحيد مخططات الـ APIs وتحسين موثوقية تكامل واستيعاب البيانات."
@@ -409,9 +363,8 @@ export const translations = {
         },
         {
           role: "أخصائي محاذاة الذكاء الاصطناعي وأمان الأكواد",
-          company: "أطلس كابتشر · تعاقد عن بعد",
+          company: "أطلس كابتشر · تعاقد عن بُعد",
           period: "ديسمبر 2024 — فبراير 2025",
-          badge: "تعاقد",
           bullets: [
             "تدقيق وتصحيح أكواد بايثون وتايب سكريبت المولدة من النماذج اللغوية الرائدة لإنشاء مجموعات بيانات محاذاة عالية الدقة لـ RLHF.",
             "تقييم اختبارات حقن الأوامر العدائية، ومحاولات كسر الحماية، ومتجهات الهلوسة لفرض أمان وصحة استجابات النماذج.",
@@ -422,54 +375,50 @@ export const translations = {
       ]
     },
     skills: {
-      sectionBadge: "الترسانة التقنية",
-      headline: "تقنيات تم اختبارها وتطبيقها في بيئات عمل حقيقية.",
+      sectionTitle: "المهارات التقنية",
+      headline: "التقنيات الأساسية المعتمدة في بيئات الإنتاج.",
       groups: [
         {
           title: "الذكاء الاصطناعي والوكلاء",
-          icon: "Bot",
           skills: [
-            "LangGraph (مخططات حلقية وحفظ الحالة)",
-            "معمارية RAG للإنتاج واسترجاع المتجهات",
-            "بوابات استدعاء الأدوات المقيدة",
-            "LiteLLM وإدارة التبديل بين المزودين",
-            "حفظ الجلسات ونقاط الاستعادة بـ Redis",
+            "LangGraph (مخططات حلقية)",
+            "معمارية RAG للإنتاج",
+            "بوابات استدعاء الأدوات",
+            "LiteLLM وإدارة التبديل",
+            "حفظ الجلسات بـ Redis",
             "واجهات Groq و Gemini",
-            "Meta Llama 3.2 Vision و Whisper"
+            "Whisper ونماذج الرؤية"
           ]
         },
         {
-          title: "الواجهات الخلفية والتزامن",
-          icon: "Server",
+          title: "الأنظمة الخلفية والتزامن",
           skills: [
-            "Python (AsyncIO, Concurrency)",
-            "خدمات FastAPI المصغرة",
-            "WebSockets ثنائية الاتجاه",
-            "طوابير مهام Celery غير المتزامنة",
-            "Redis (Pub/Sub والتخزين المؤقت)",
-            "Pydantic v2 (التدقيق الصارم للمخططات)",
+            "Python (AsyncIO)",
+            "FastAPI Microservices",
+            "WebSockets",
+            "طوابير مهام Celery",
+            "Redis (Pub/Sub وتخزين مؤقت)",
+            "Pydantic v2 للتدقيق الصارم",
             "SQLAlchemy وترحيلات Alembic"
           ]
         },
         {
           title: "السحابة والتشغيل (DevOps)",
-          icon: "Cloud",
           skills: [
-            "Docker وبناء الحاويات متعدد المراحل",
+            "Docker و Docker Compose",
             "ملفات نشر Kubernetes",
-            "أتمتة CI/CD عبر GitHub Actions",
+            "أتمتة CI/CD بـ GitHub Actions",
             "أنظمة Linux وسكربتات Bash",
             "اختبارات Pytest المؤتمتة",
-            "Cloudflare Pages & Workers"
+            "Cloudflare Pages و DNS"
           ]
         },
         {
           title: "قواعد البيانات والواجهات",
-          icon: "Database",
           skills: [
-            "PostgreSQL (معاملات، فهرسة)",
-            "بحث المتجهات (FAISS / PGVector)",
-            "TypeScript و JavaScript",
+            "PostgreSQL",
+            "بحث المتجهات (FAISS/PGVector)",
+            "TypeScript",
             "React 18 و Next.js",
             "Tailwind CSS"
           ]
@@ -477,8 +426,8 @@ export const translations = {
       ]
     },
     education: {
-      sectionBadge: "التعليم والشهادات",
-      headline: "الأساس الأكاديمي والتدريب المتقدم في الذكاء الاصطناعي.",
+      sectionTitle: "التعليم والشهادات",
+      headline: "الأساس الأكاديمي والتدريب المتقدم.",
       degree: {
         title: "بكالوريوس في علوم الحاسب",
         institution: "جامعة المنصورة، مصر",
@@ -488,41 +437,34 @@ export const translations = {
       certs: [
         {
           title: "ماستركلاس هندسة الذكاء الاصطناعي",
-          issuer: "د. محمود عيد (Dr. Mahmoud Eid)",
+          issuer: "د. محمود عيد",
           year: "2026",
-          badge: "تدريب تخصصي متقدم",
           desc: "معمارية الوكلاء المتقدمة، ومخططات LangGraph الحتمية، وإدارة الذاكرة، وهندسة النماذج اللغوية في الإنتاج."
         },
         {
           title: "شهادة تطوير الواجهات الخلفية",
           issuer: "جامعة المنصورة",
           year: "2022",
-          badge: "هندسة الباك إند",
           desc: "تصميم قواعد البيانات، وتطوير واجهات برمجة التطبيقات، والمصادقة، والأنظمة المتزامنة."
         },
         {
           title: "أخلاقيات عصر الذكاء الاصطناعي التوليدي",
           issuer: "IBM",
           year: "2024",
-          badge: "أمان الذكاء الاصطناعي",
           desc: "محاذاة النماذج اللغوية، بوابات الأمان، وتجنب الانحيازات في التطبيقات الواقعية."
         }
       ]
     },
     contact: {
-      sectionBadge: "جاهز للتوظيف؟",
-      headline: "دعنا نبني أنظمة ذكاء اصطناعي موثوقة لمنتجكم.",
-      desc: "سواء كنتم تبحثون عن مهندس ذكاء اصطناعي تطبيقي، أو واجهة خلفية فائقة السرعة ببايثون، أو تكامل ذكي شامل — أنا جاهز للبدء فوراً.",
-      emailLabel: "البريد الإلكتروني",
-      emailValue: "ahmedekramy303@gmail.com",
-      whatsappLabel: "واتساب مباشر",
-      whatsappValue: "+20 106 933 4256",
+      sectionTitle: "التواصل",
+      headline: "يسعدني دائماً التواصل.",
+      desc: "متاح لفرص العمل كمهندس ذكاء اصطناعي أو باك إند بايثون (دوام كامل أو تعاقد، عن بُعد أو إمكانية الانتقال). يمكنك التواصل معي مباشرة.",
       btnEmail: "مراسلتي عبر البريد",
-      btnWhatsApp: "محادثة عبر واتساب",
-      btnLinkedIn: "الملف على لينكد إن",
-      btnGitHub: "الملف على جيت هاب",
+      btnWhatsApp: "واتساب",
+      btnLinkedIn: "لينكد إن",
+      btnGitHub: "جيت هاب",
       btnResume: "تحميل السيرة الذاتية (PDF)",
-      footer: "© {year} أحمد جيتر. صُمم وطُوّر بمعمارية زجاجية هلامية انسيابية وأكواد إنتاجية موثوقة."
+      footer: "© {year} أحمد جيتر. صُمم وهُندس بكل بساطة واحترافية."
     }
   }
 };
