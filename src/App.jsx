@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { 
   Mail, Github, Linkedin, ArrowRight, ExternalLink, 
   Languages, ChevronLeft, ChevronRight, Download, MessageCircle, 
@@ -83,7 +83,7 @@ const ProjectImage = ({ project }) => {
             <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
             <span className="font-semibold text-slate-300">guardrail_service.py</span>
           </div>
-          <span className="text-[10px] text-slate-500">FastAPI • Pydantic V2</span>
+          <span className="text-[10px] text-slate-500">FastAPI â€¢ Pydantic V2</span>
         </div>
         <pre className="text-slate-300 leading-relaxed text-[11.5px] overflow-x-auto font-mono">
           <span className="text-blue-400">@router.post</span>(<span className="text-emerald-400">"/v1/guardrails/sanitize"</span>){'\n'}
@@ -186,11 +186,11 @@ export default function App() {
               className="px-2.5 py-1 rounded-md bg-slate-800/70 hover:bg-slate-800 text-xs font-medium text-slate-300 border border-slate-700/60 transition-colors flex items-center gap-1.5"
             >
               <Languages size={13} className="text-blue-400" />
-              <span>{lang === 'en' ? 'العربية' : 'EN'}</span>
+              <span>{lang === 'en' ? 'Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©' : 'EN'}</span>
             </button>
 
             <a 
-              href="https://drive.google.com/file/d/1LQYa5QLU3q8cB27JuKM2fqafNsjNXLTC/view?usp=sharing"
+              href="/Ahmed_Gaiter_AI_Engineer_CV.pdf" download="Ahmed_Gaiter_AI_Engineer_CV.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-sm transition-all"
@@ -240,7 +240,7 @@ export default function App() {
             {/* Primary Action Buttons */}
             <div className="flex flex-wrap items-center gap-3">
               <a 
-                href="https://drive.google.com/file/d/1LQYa5QLU3q8cB27JuKM2fqafNsjNXLTC/view?usp=sharing"
+                href="/Ahmed_Gaiter_AI_Engineer_CV.pdf" download="Ahmed_Gaiter_AI_Engineer_CV.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all flex items-center gap-2 shadow-sm"
@@ -575,3 +575,4 @@ export default function App() {
     </div>
   );
 }
+
